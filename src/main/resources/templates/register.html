@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pgo-Gym | Registration</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+ <!-- CSS only -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link  rel="stylesheet" th:href="@{/css/addCustomer.css}">
+</head>
+<body>
+  
+   <br><br>
+  <center> <h2 style="color: white"><b> New User Registration </b></h2></center><br>
+     
+  <center><div  class="form-container">
+    
+    <form  method="post" th:object="${NewUsers}">
+    
+    <b>Username</b>
+    <input type="text" placeholder="Enter name" name="CustomerName" required th:field="*{CustomerName}"><br>
+
+     <b>Email</b>
+    <input type="text" placeholder="Enter email" name="CustomerEmail" required th:field="*{CustomerEmail}"><br>
+    
+    <b>Contact</b>
+    <input type="number" placeholder="Enter no" name="CustomerContactNo" required th:field="*{CustomerContactNo}"><br>
+    
+     
+     <b>Country</b>
+    <select name="Country" th:field="*{Country}">
+			<option value="India">India</option>
+				<option value="Usa">USA</option>
+					<option value="Germany">Germany</option>
+						<option value="Canada">Canada</option>
+							<option value="London">London</option>
+		</select><br>
+		
+	  
+    <b>State</b>
+    <input type="text" placeholder="Enter State" name="state" required th:field="*{state}"><br>
+    
+      
+     <b>City</b>
+    <input type="text" placeholder="Enter City" name="City" required th:field="*{City}"><br>
+    
+     
+    <b>Zipcode</b>
+    <input type="number" placeholder="Enter Zipcode" name="Zipcode" required th:field="*{Zipcode}"><br>
+    
+      
+     <b>DateAdded</b>
+    <input type="date"  name="DateAdded" required th:field="*{DateAdded}"><br><br>
+    
+        <center><button  onclick="alert('Registration Successfull')"  class="btn" type="submit">Register</button></center><br>
+      
+        
+		</form></center>
+		</div><br>
+
+	
+</body>
+</html>

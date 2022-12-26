@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/cash-card-starters-colored/48/JD-09-512.png" type="image/x-icon" />
+    <title>Pay-with-card</title>
+    <link th:href="@{/css/card-payment.css}"  rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+</head>
+<body>
+    <h1>Pay-With Card</h1>
+    <form  th:object="${NewCard}"  method="POST"  >
+        <div class="wrapper">
+          <div class="payment">
+      
+            <h2>Payment Gateway</h2>
+            <div class="form">
+              <div class="card space icon-relative">
+                <label class="label">Card holder:</label>
+                <input type="text" class="input"  name="CardHolderName" placeholder="Card holders name"  th:field="*{CardHolderName}"  required >
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="card space icon-relative">
+                <label class="label">Card number:</label>
+                <input type="text" class="input" data-mask="0000 0000 0000 0000"  name="CardNumber" placeholder="Card Number"   th:field="*{CardNumber}"  required >
+                <i class="far fa-credit-card"></i>
+              </div>
+              
+              <div class="card-grp space">
+                <div class="card-item icon-relative">
+                  <label class="label">Expiry date:</label>
+                  <input type="number"  class="input"  name="Expdate"  placeholder="00 / 00" th:field="*{Expdate}"   required >
+                  <i class="far fa-calendar-alt"></i>
+                </div>
+                <div class="card-item icon-relative">
+                  <label class="label">CVC:</label>
+                  <input type="number" class="input" data-mask="000"  name="cvv" placeholder="000"  th:field="*{cvv}"   required >
+                  <i class="fas fa-lock"></i>
+                </div>
+                <div class="card-item icon-relative">
+                  <label class="label">Select plan:</label>
+                    <select name="Plan" th:field="*{Plan}">
+			              <option value="Basic">Basic</option>
+						   <option value="Premium">Premium"</option>
+							<option value="Super">Super</option>		
+		      			 </select>	
+                    <div>
+                </div>
+              </div>
+            
+              <button onclick="alert('Membership Added\Successfully')" type="submit" >Pay Now</button>
+
+            </div>
+          </div>
+        </div>
+      
+      </form>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+      <script>$("input[name='data[expiry-date]'").mask("00 / 00");</script>
+    
+  
+
+
+</body>
+</html>

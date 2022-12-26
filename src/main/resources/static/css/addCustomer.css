@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700&display=swap");
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(#111, #071a1a);
+  overflow-x: hidden;
+   font-family: "Nunito", sans-serif;
+}
+
+
+
+input[type=text],select {
+  width: 30%;
+ background-color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+   font-family: "Nunito", sans-serif;
+ 
+}
+
+input[type=number] {
+  width: 30%;
+background-color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+    border-radius: 5px;
+  border: none;
+   font-family: "Nunito", sans-serif;
+ 
+}
+
+input[type=date] {
+  width: 15%;
+ background-color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+    border-radius: 5px;
+  border: none;
+   font-family: "Nunito", sans-serif;
+}
+
+.form-container{
+	
+	background-color: white;
+	width: 50%;
+	border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 28px;
+  background: #29a396;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+   font-family: "Nunito", sans-serif;
+}
+

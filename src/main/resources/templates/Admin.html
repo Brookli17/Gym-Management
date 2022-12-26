@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link  rel="stylesheet" th:href="@{/css/Admin.css}">
+  <title>Pgo-Gym | Admin-Login</title>
+</head>
+<body>
+  
+  
+ <center><h1 style="color: white">Gym | Admin-Login </h1></center>
+  <h2 style="color: white">User Details</h2>
+ 
+     <table class="table">
+     <tr>
+       <th>CustomerId</th>
+       <th>CustomerName</th>
+       <th>CustomerEmail</th>
+       <th>CustomerContactNo</th>
+       <th>Country</th>
+        <th>state</th>
+         <th>City</th>
+          <th>Zipcode</th>
+           <th>DateAdded</th>
+            <th colspan="3">Actions</th>
+     </tr>
+          <tr  th:each="N:${NewUserlist}">
+              <td th:text="${N.CustomerId}"></td>
+              <td th:text="${N.CustomerName}"></td>
+              <td th:text="${N.CustomerEmail}"></td>
+               <td th:text="${N.CustomerContactNo}"></td>
+                   <td th:text="${N.Country}"></td>
+                    <td th:text="${N.state}"></td>
+                    <td th:text="${N.City}"></td>
+                    <td th:text="${N.Zipcode}"></td>
+                    <td th:text="${N.DateAdded}"></td>
+    
+                   
+           <td ><a th:href="@{/Update/{CustomerId}(CustomerId=${N.CustomerId})}"><i class="bi bi-pencil-square"></i></a></td>
+           <td><a  onlick="alert('User Deleted Successfully')" th:href="@{/delete(CustomerId=${N.CustomerId})}"><i class="bi bi-trash-fill"></i></a></td>
+         
+       </tr>
+     </table><hr><br>
+   
+   
+       <table class="table">
+      <h2 style="color: white">User Card Details</h2>
+      <tr>
+       <th>CardHolderName</th>
+       <th>CardNumber</th>
+       <th>Expdate</th>
+       <th>cvv</th> 
+        <th>Plan Selected</th>    
+       </tr>
+       
+         <tr  th:each="C:${NewCardlist}">
+          <td th:text="${C.CardHolderName}"></td>
+              <td th:text="${C.CardNumber}"></td>
+              <td th:text="${C.Expdate}"></td>
+               <td th:text="${C.cvv}"></td>
+                 <td th:text="${C.Plan}"></td>
+       
+     
+     
+     </table><hr><br>
+  
+</body>
+</html>

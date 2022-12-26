@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View-Plans</title>
+    <link th:href="@{/css/ViewPlans.css}" rel="stylesheet">
+</head>
+<body>
+  <h1>Select Membership</h1>
+    <div id="price">
+        <!--price tab-->
+        <div class="plan">
+          <div class="plan-inner">
+            <div class="entry-title">
+              <h3>Basic Plan</h3>
+              <div class="price">1000₹<span>Per/Month</span>
+              </div>
+            </div>
+            <div class="entry-content">
+              <ul>
+                <li><strong>4</strong> Days Access</li>
+                <li><strong>60Min</strong>Cardio</li>
+                <li><strong style="color: red;">X</strong> Personal Trainer</li>
+                <li><strong>Fixed</strong>Timings</li>
+                <li><strong style="color: red;">X</strong> Yoga</li>
+              </ul>
+            </div>
+            <div class="btn">
+              <a id="basic" href="/CardPayment">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- end of price tab-->
+        <!--price tab-->
+        <div class="plan basic">
+          <div class="plan-inner">
+            <div class="hot">hot</div>
+            <div class="entry-title">
+              <h3>Premium Plan</h3>
+              <div class="price">5000₹<span>3/Month</span>
+              </div>
+            </div>
+            <div class="entry-content">
+              <ul>
+                <li><strong>6</strong> Days Access</li>
+                <li><strong>2hrs</strong>Cardio</li>
+                <li><strong style="color: green;" >✓</strong> Personal Trainer</li>
+                <li><strong>Felxible</strong>Timings</li>
+                <li><strong style="color: green;">✓</strong> Yoga</li>
+              </ul>
+            </div>
+            <div class="btn">
+              <a id="premium" href="/CardPayment">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- end of price tab-->
+        <!--price tab-->
+        <div class="plan standard">
+          <div class="plan-inner">
+            <div class="entry-title">
+              <h3>Super Premium</h3>
+              <div class="price">8000₹<span>12/Months</span>
+              </div>
+            </div>
+            <div class="entry-content">
+                <ul>
+                <li><strong>Unlimited</strong> Days Access</li>
+                <li><strong>Unlimited</strong>Cardio</li>
+                <li><strong style="color: green;" >✓</strong> Personal Trainer</li>
+                <li><strong>Felxible</strong>Timings</li>
+                <li><strong style="color: green;">✓</strong> Yoga</li>
+              </ul>
+            </div>
+            <div class="btn">
+              <a id="super" href="/CardPayment">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- end of price tab-->
+       
+      </div>
+</body>
+</html>
