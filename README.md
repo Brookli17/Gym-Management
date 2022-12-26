@@ -32,6 +32,9 @@ Features of site
 <b>Ambience</b>
 ![image](https://user-images.githubusercontent.com/91592513/209514214-dc1c4c84-b8a5-4a3f-b5da-0c657d650f1d.png)
 
+<b></b>
+![image](https://user-images.githubusercontent.com/91592513/209516159-39e48cc2-0fc2-45ca-9aa5-59b703ced7ef.png)
+
 <b>New User registration</b>
 ![image](https://user-images.githubusercontent.com/91592513/209514401-a08cb4d3-a2c8-4942-b426-d448ad7ececc.png)
 
